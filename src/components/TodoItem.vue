@@ -1,9 +1,14 @@
 <template>
-  <div>
-    <ul>
-      {{todo.title}}
-    </ul>
-  </div>
+    
+      <li>
+        <span>
+          <input type="checkbox">
+          <strong>{{todo.id}}</strong>
+          {{todo.title}}
+        </span>
+        <button>&times;</button>
+      </li>
+    
 </template>
 
 <script>
