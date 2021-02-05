@@ -6,7 +6,6 @@
         v-bind:key="todo.index"
         v-bind:todo="todo"
         v-bind:index="i"
-        v-bind:compl="complete"
         @remove-todo="removeTodo"
       />
     </ul>
