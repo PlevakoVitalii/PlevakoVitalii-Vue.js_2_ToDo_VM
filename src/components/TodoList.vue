@@ -1,30 +1,30 @@
 <template>
   <div>
     <ul>
-      <TodoItem 
-      v-for="(todo, i) of todos"
-      v-bind:key="todo.index"
-      v-bind:todo="todo"
-      v-bind:index="i" 
-      @remove-todo="removeTodo"
+      <TodoItem
+        v-for="(todo, i) of todos"
+        v-bind:key="todo.index"
+        v-bind:todo="todo"
+        v-bind:index="i"
+        @remove-todo="removeTodo"
       />
     </ul>
   </div>
 </template>
 
 <script>
-import TodoItem from '@/components/TodoItem'
+import TodoItem from "@/components/TodoItem";
 export default {
-  props:['todos'],
-  components:{
-    TodoItem
+  props: ["todos"],
+  components: {
+    TodoItem,
   },
-  methods:{
-    removeTodo(id){
-      this.$emit('remove-todo', id)
-    }
-  }
-}
+  methods: {
+    removeTodo(id) {
+      this.$emit("remove-todo", id);
+    },
+  },
+};
 </script>
 
 <style  scoped>
@@ -33,5 +33,4 @@ ul {
   margin: 0;
   padding: 0;
 }
-
 </style>
