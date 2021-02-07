@@ -4,6 +4,7 @@
     <AddTodo @add-todo="addTodo" />
     <hr />
     <TodoList v-bind:todos="todos" @remove-todo="removeTodo" />
+  <hr />
   </div>
 </template>
 
