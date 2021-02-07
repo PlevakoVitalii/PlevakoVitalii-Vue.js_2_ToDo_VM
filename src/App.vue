@@ -3,6 +3,7 @@
     <h1>Todo aplication</h1>
     <AddTodo @add-todo="addTodo" />
     <hr />
+    
     <TodoList v-bind:todos="todos" @remove-todo="removeTodo" />
   </div>
 </template>
