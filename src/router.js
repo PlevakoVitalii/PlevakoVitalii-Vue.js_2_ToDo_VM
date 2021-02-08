@@ -1,4 +1,4 @@
-import Vue from 'Vue'
+import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/views/Home.vue'
 
@@ -13,7 +13,7 @@ export default new Router({
     }, 
     {
       path:'/todos',
-      coponent: ()=>import('./vuews/Todos.vue')
+      coponent: ()=>import('./views/Todos.vue')
     }
   ]
 })
