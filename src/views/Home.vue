@@ -7,7 +7,7 @@
       quo quidem labore assumenda non, error a dignissimos! Possimus, nobis!
       Minima, sint nulla nisi necessitatibus laborum at fuga perspiciatis?
     </p>
-
+    <hr />
     <a href="/todos">Todos</a>
   </div>
 </template>
