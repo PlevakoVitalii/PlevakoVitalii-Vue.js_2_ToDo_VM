@@ -2,17 +2,22 @@
   <div>
     <h2>Todo aplication</h2>
     <router-link to="/">Home</router-link>
-    <hr />
-<Loader/>
+<hr />
     <AddTodo @add-todo="addTodo" />
+    <select v-model="filter">
+      <option value="all">All</option>
+      <option value="completed">Completed</option>
+      <option value="not-completed">Not completed</option>
+    </select>
+
     <hr />
     <Loader v-if="loading" />
     <TodoList
-      v-else-if="todos.length"
-      v-bind:todos="todos"
+      v-else-if="filteredTodos.length"
+      v-bind:todos="filteredTodos"
       @remove-todo="removeTodo"
     />
-    <p v-else>No dodos!</p>
+    <p v-else>No Todos!</p>
   </div>
 </template> 
 
@@ -26,6 +31,7 @@ export default {
     return {
       todos: [],
       loading: true,
+      filter: "all",
     };
   },
   mounted() {
@@ -35,8 +41,30 @@ export default {
         setTimeout(() => {
           this.todos = json;
           this.loading = false;
-        }, 30000);
+
+        }, 1000);
+
       });
+  },
+  // watch: {
+  //   filter(value) {
+  //     console.log(value);
+  //   },
+  // },
+  computed: {
+    filteredTodos() {
+      var filter
+      if (this.filter === "all") {
+        return this.todos;
+      }
+      if (this.filter === "completed") {
+        return this.todos.filter(t => t.completed);
+      }
+      if (this.filter === "not-completed") {
+        return this.todos.filter(t => !t.completed);
+      }
+      return filter
+    },
   },
   methods: {
     removeTodo(id) {
