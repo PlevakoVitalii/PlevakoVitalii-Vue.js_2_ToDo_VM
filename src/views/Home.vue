@@ -8,6 +8,6 @@
       Minima, sint nulla nisi necessitatibus laborum at fuga perspiciatis?
     </p>
     <hr />
-    <a href="/todos">Todos</a>
+    <router-link to="/todos">Todos</router-link>
   </div>
 </template>
