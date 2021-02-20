@@ -1,6 +1,7 @@
 <template>
   <div>
     <h2>Home page</h2>
+    <hr />
 
     <p>
       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat et eius
